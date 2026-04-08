@@ -1,0 +1,20 @@
+{
+  "name": "taller-3",
+  "version": "1.0.0",
+  "description": "Taller 3",
+  "homepage": "https://github.com/S-ramirezR/Taller-3---Desarrollo-de-Software-en-Equipos#readme",
+  "bugs": {
+    "url": "https://github.com/S-ramirezR/Taller-3---Desarrollo-de-Software-en-Equipos/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/S-ramirezR/Taller-3---Desarrollo-de-Software-en-Equipos.git"
+  },
+  "license": "ISC",
+  "author": "Santiago Ramirez",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

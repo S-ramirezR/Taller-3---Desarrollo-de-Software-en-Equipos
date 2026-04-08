@@ -1,13 +1,12 @@
 export class Serie {
-    private id : number;
-    private name: string;
-    private channel : string;
-    private seasons : number;
-    private description : string;
-    private website : string;
-    private poster : string;
-
-    constructor(id: number, name: string, channel: string, seasons: number,description: string, website: string, poster: string) {
+    id;
+    name;
+    channel;
+    seasons;
+    description;
+    website;
+    poster;
+    constructor(id, name, channel, seasons, description, website, poster) {
         this.name = name;
         this.channel = channel;
         this.seasons = seasons;
@@ -16,28 +15,21 @@ export class Serie {
         this.website = website;
         this.poster = poster;
     }
-
-    public createTableRow(): HTMLTableRowElement {
+    createTableRow() {
         const row = document.createElement("tr");
-
         const idCell = document.createElement("td");
         idCell.textContent = this.id.toString();
-
         const nameCell = document.createElement("td");
         nameCell.textContent = this.name;
-
         const channelCell = document.createElement("td");
         channelCell.textContent = this.channel;
-
         const seasonsCell = document.createElement("td");
         seasonsCell.textContent = this.seasons.toString();
-
         row.appendChild(idCell);
         row.appendChild(nameCell);
         row.appendChild(channelCell);
         row.appendChild(seasonsCell);
-
         return row;
     }
-
 }
+//# sourceMappingURL=Serie.js.map
