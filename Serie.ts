@@ -17,6 +17,23 @@ export class Serie {
         this.poster = poster;
     }
 
+
+    public getId(): number {
+        return this.id;
+    }
+
+    public getName(): string {
+        return this.name;
+    }
+
+    public getChannel(): string {
+        return this.channel;
+    }
+
+    public getSeasons(): number {
+        return this.seasons;
+    }
+
     public createTableRow(): HTMLTableRowElement {
         const row = document.createElement("tr");
 
@@ -24,7 +41,12 @@ export class Serie {
         idCell.textContent = this.id.toString();
 
         const nameCell = document.createElement("td");
-        nameCell.textContent = this.name;
+        
+        const nameLink = document.createElement("span");
+        nameLink.textContent = this.name;
+        nameLink.className = "serie-link";
+
+        nameCell.appendChild(nameLink);
 
         const channelCell = document.createElement("td");
         channelCell.textContent = this.channel;
@@ -38,6 +60,43 @@ export class Serie {
         row.appendChild(seasonsCell);
 
         return row;
+    }
+
+
+    public createDetailCard(): HTMLDivElement {
+        const card = document.createElement("div");
+        card.className = "card text-white bg-dark mb-3";
+
+        const img = document.createElement("img");
+        img.className = "card-img-top";
+        img.src = this.poster;
+        img.style.width = "100%";
+
+
+        const cardBody = document.createElement("div");
+        cardBody.className = "card-body";
+
+        const title = document.createElement("h5");
+        title.className = "card-title";
+        title.textContent = this.name;
+
+        const description = document.createElement("p");
+        description.className = "card-text";
+        description.textContent = this.description;
+
+        const link = document.createElement("a");
+        link.href = this.website;
+        link.textContent = "More info";
+        link.target = "_blank";
+
+        cardBody.appendChild(title);
+        cardBody.appendChild(description);
+        cardBody.appendChild(link);
+
+        card.appendChild(img);
+        card.appendChild(cardBody);
+
+        return card;
     }
 
 }

@@ -1,0 +1,27 @@
+body {
+        padding: 25px;
+        background-color: #4a4a4a;
+    }
+
+.header {
+        background-color: #575757;
+        color: white;
+        padding : 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+.table-container {
+        max-width: 900px;
+    }
+
+.serie-link {
+        color: #1e90ff;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+.serie-link:hover {
+        color: #63b3ed;
+    }
